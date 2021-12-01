@@ -88,8 +88,8 @@ def run_inference_for_single_image(model, image):
 
 
 
-def show_inference(model, image_path):
-    category_index = load_labels()
+def show_inference(model, image_path, category_index=load_labels()):
+    category_index = category_index
     image_np = np.array(Image.open(image_path))
     output_dict = run_inference_for_single_image(model, image_np)
     viz_utils.visualize_boxes_and_labels_on_image_array(
@@ -108,11 +108,13 @@ def show_inference(model, image_path):
 
 
 
-PATH_TO_TEST_IMAGES_DIR = pathlib.Path('D:\ProgramData\TensorFlow\models\\research\object_detection\\test_images')
-TEST_IMAGE_PATHS = sorted(list(PATH_TO_TEST_IMAGES_DIR.glob("*.jpg")))
-MODEL = 'efficientdet_d2_coco17_tpu-32'
-detection_model = load_model(MODEL)
 
+def main():
+    PATH_TO_IMAGE = pathlib.Path('D:\ProgramData\TensorFlow\workspace\\training_det\\test.jpg')
 
-for image_path in TEST_IMAGE_PATHS:
-    show_inference(detection_model, image_path)
+    MODEL = 'centernet_hg104_512x512_coco17_tpu-8'
+    detection_model = load_model()
+
+    show_inference(detection_model, PATH_TO_IMAGE)
+
+main()

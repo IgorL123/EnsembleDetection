@@ -1,13 +1,13 @@
 
 import os
 
-DATA_IMG_TEST_DIR = 'D:\ProgramData\TensorFlow\workspace\\training_det\dota\data\images\\test'
+DATA_IMG_TEST_DIR = 'D:\ProgramData\TensorFlow\workspace\\training_det\dota\data_toscale_test\images'
 DATA_LABEL_TEST_DIR = 'D:\ProgramData\TensorFlow\workspace\\training_det\dota\data\labelTxt\\test'
 
 DATA_IMG_TRAIN_DIR = 'D:\ProgramData\TensorFlow\workspace\\training_det\dota\data\images\\train'
 DATA_LABEL_TRAIN_DIR = 'D:\ProgramData\TensorFlow\workspace\\training_det\dota\data\labelTxt\\train'
 
-INDEX_FILE_PATH = 'D:\ProgramData\TensorFlow\workspace\\training_det\dota\data'
+INDEX_FILE_PATH = 'D:\ProgramData\TensorFlow\workspace\\training_det\dota\data_toscale_test'
 
 def create_index_file(index_path, img_path):
     img_list = os.listdir(img_path)
