@@ -27,9 +27,9 @@ from DOTA import DOTA
 tf.keras.backend.clear_session()
 
 print('Building model and restoring weights for fine-tuning...', flush=True)
-num_classes = 1
-pipeline_config = 'models/research/object_detection/configs/tf2/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.config'
-checkpoint_path = 'models/research/object_detection/test_data/checkpoint/ckpt-0'
+num_classes = 16
+pipeline_config = 'D:\ProgramData\TensorFlow\workspace\\training_det\pre-trained-models\ssd_resnet50_v1_fpn_640x640_coco17_tpu-8\pipeline.config'
+checkpoint_path = 'D:\ProgramData\TensorFlow\workspace\\training_det\pre-trained-models\ssd_resnet50_v1_fpn_640x640_coco17_tpu-8\checkpoint\ckpt-0'
 
 # Load pipeline config and build a detection model.
 #
@@ -40,6 +40,8 @@ configs = config_util.get_configs_from_pipeline_file(pipeline_config)
 model_config = configs['model']
 model_config.ssd.num_classes = num_classes
 model_config.ssd.freeze_batchnorm = True
+model_config.train_config.fine_tune_checkpoint_type = "detection"
+model_config.train_config.use_bfloat16 = False
 detection_model = model_builder.build(
       model_config=model_config, is_training=True)
 

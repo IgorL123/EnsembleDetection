@@ -1,0 +1,90 @@
+item {
+    name: "airport",
+    id: 1,
+    display_name: "airport"
+}
+item {
+    name: "baseball-diamond",
+    id: 2,
+    display_name: "baseball-diamond"
+}
+item {
+    name: "basketball-court",
+    id: 3,
+    display_name: "basketball-court"
+}
+item {
+    name: "bridge",
+    id: 4,
+    display_name: "bridge"
+}
+item {
+    name: "container-crane",
+    id: 5,
+    display_name: "container-crane"
+}
+item {
+    name: "ground-track-field",
+    id: 6,
+    display_name: "ground-track-field"
+}
+item {
+    name: "harbor",
+    id: 7,
+    display_name: "harbor"
+}
+item {
+    name: "helicopter",
+    id: 8,
+    display_name: "helicopter"
+}
+item {
+    name: "helipad",
+    id: 9,
+    display_name: "helipad"
+}
+item {
+    name: "large-vehicle",
+    id: 10,
+    display_name: "large-vehicle"
+}
+item {
+    name: "plane",
+    id: 11,
+    display_name: "plane"
+}
+item {
+    name: "roundabout",
+    id: 12,
+    display_name: "roundabout"
+}
+item {
+    name: "ship",
+    id: 13,
+    display_name: "ship"
+}
+item {
+    name: "small-vehicle",
+    id: 14,
+    display_name: "small-vehicle"
+}
+item {
+    name: "soccer-ball-field",
+    id: 15,
+    display_name: "soccer-ball-field"
+}
+item {
+    name: "storage-tank",
+    id: 16,
+    display_name: "storage-tank"
+}
+item {
+    name: "swimming-pool",
+    id: 17,
+    display_name: "swimming-pool"
+}
+item {
+    name: "tennis-court",
+    id: 18,
+    display_name: "tennis-court"
+}
